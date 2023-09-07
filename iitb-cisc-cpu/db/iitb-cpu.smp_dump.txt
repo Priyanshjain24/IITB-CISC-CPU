@@ -1,0 +1,18 @@
+
+State Machine - |DUT|Datapath:add_instance|FSMultraProMax:Controller|ps_state
+Name ps_state.S100 ps_state.S99 ps_state.S10 ps_state.S9 ps_state.S8 ps_state.S7 ps_state.Sw ps_state.SL ps_state.S6 ps_state.S5 ps_state.S4 ps_state.S3 ps_state.S2 ps_state.S1 ps_state.S0 
+ps_state.S0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+ps_state.S1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+ps_state.S2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+ps_state.S3 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+ps_state.S4 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+ps_state.S5 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+ps_state.S6 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+ps_state.SL 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+ps_state.Sw 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+ps_state.S7 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+ps_state.S8 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+ps_state.S9 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+ps_state.S10 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+ps_state.S99 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+ps_state.S100 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 

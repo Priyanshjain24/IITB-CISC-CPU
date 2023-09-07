@@ -1,0 +1,242 @@
+library std;
+use std.standard.all;
+library ieee;
+use ieee.std_logic_1164.all;
+library ieee;
+use ieee.numeric_std.all; 
+
+entity FSMultraProMax is
+    	port(
+		clk, rst, Cin, Zin: in std_logic;
+        instruction, T1, T2: in std_logic_vector(15 downto 0);
+--        A1_out, A2_out, A3_out: out std_logic_vector(2 downto 0); 
+        S, AM1, AM2, RFWRS, rf_StorM, temp: out std_logic_vector(1 downto 0);
+--		  Imm6: out std_logic_vector(5 downto 0);
+--		  Imm9: out std_logic_vector(8 downto 0);
+        -- RFM: out std_logic;
+
+        -- T1, T2: out std_logic_vector(15 downto 0);
+        -- wr_rf, wr_alu, wr_mem, wr_T1, wr_T2, wr_T3: out std_logic;
+        -- data_in: out std_logic_vector(15 downto 0);
+        wr_mem, wr_IR, wr_T1, wr_T2, wr_T3, wr_C, wr_Z, RFexp, T3M: out std_logic;
+		  State_value: out std_logic_vector(3 downto 0));
+
+end entity;
+
+
+architecture fsm of FSMultraProMax is
+    type FSM_State is ( S0, S1, S2, S3, S4, S5, S6, S9, SL, Sw, S7, S8, S99, S100);
+    signal ps_state: FSM_State;
+	 signal nx_state : FSM_State;
+
+   signal Op : std_logic_vector(3 downto 0);
+--   signal A1 : std_logic_vector(2 downto 0):= instruction(11 downto 9);
+--   signal A2 : std_logic_vector(2 downto 0):= instruction(8 downto 6);
+-- signal A3 : std_logic_vector(2 downto 0):= instruction(6 downto 4);
+   signal Ctemp : std_logic;
+   signal Ztemp : std_logic;
+   signal CZtemp : std_logic_vector(1 downto 0);
+
+   
+
+    begin
+			Op <= instruction(15 downto 12);
+        transition_process: process(clk,rst)
+
+        begin
+        if(rst='1')then 
+        ps_state<=S0;
+        else
+		  if(clk'event and clk='0')then
+        ps_state<=nx_state;
+		  end if;
+        end if;
+        end process transition_process;
+
+
+
+        next_state_logic: process (ps_state)
+
+        begin
+            case ps_state is
+
+                when S0 =>
+                nx_state <= S1;
+
+                when S1 =>
+					 
+                if(Op="0011") then
+                    nx_state <= S6;
+                else
+                nx_state <= S4;
+                end if;
+
+                when S4 =>
+					 
+					 if (Op="1100") then
+					 if (T1 = T2) then
+					 nx_state <= S100;
+					 else
+					 nx_state <= S99;
+					 end if;
+					 
+					 elsif (Op="0100") then
+					 nx_state <= SL;
+					 elsif (Op="0101") then
+					 nx_state <=SW;
+					 else
+                nx_state <= S5;
+					 end if;
+
+                when S5 =>      ----saving T3 to Reg File
+					 if(Op="1000" or Op="1001") then
+					 nx_state <= S8;
+					 else
+                nx_state <= S99;
+					 end if;
+
+                when S6 =>
+                nx_state <= S5;
+					 
+					 when S7 =>
+					 nx_state <= S99;
+					 
+					 when S8 =>
+					 nx_state <= S100;
+					 
+					 when SL =>
+					 nx_state <= S7;
+					 
+					 when SW =>
+					 nx_state <= S99;
+
+                when S99 =>
+                nx_state <= S100;
+
+                when S100 =>
+                nx_state <= S0;
+
+                when others =>
+                null;
+
+
+        end case;
+        end process next_state_logic;
+
+        Output_process: process(ps_state)
+
+        begin
+				temp <= CZtemp;
+
+            if (CZtemp = "00" or (CZtemp = "10" and Cin = '1') or (CZtemp = "01" and Zin = '1')) then
+		    RFexp <= '1';
+	        else
+	    	RFexp <= '0';
+	        end if;
+
+            wr_mem <='0';
+            wr_IR <='0';
+            wr_T1 <='0';
+            wr_T2 <='0';
+            wr_T3 <='0';
+            wr_C <='0';
+            wr_Z <='0';
+            T3M <= '0';
+            S <= "00";
+            AM1 <="00";
+            AM2 <="00";
+				RFWRS <= "00";
+				rf_StorM <= "00";
+				
+				
+				Ctemp <= instruction(1);
+				Ztemp <= instruction(0);
+				CZtemp <= instruction(1 downto 0);
+--				A1_out <= instruction(11 downto 9);
+--            A2_out <= instruction(8 downto 6);
+--				A3_out <= instruction(5 downto 3);
+            case ps_state is
+
+                when S0 =>   
+					 state_value <="0000";
+                wr_IR<='1';
+					 RFWRS <="00";
+
+---------------------------------------------
+                when S1 =>    
+					 state_value <="0001";
+
+					 
+                
+                wr_T1 <= '1';
+                wr_T2 <= '1';
+
+-----------------------------------------------
+                when S4 =>     
+					 state_value <="0100";
+
+                wr_T3 <= '1';
+                T3M <= '0';
+                
+
+                if (Op="0000" or Op="0010" or Op="0001") then
+                if(Op="0010") then
+                S <= "10";
+                else
+                S <= "00";
+                end if;
+                
+                AM1 <= "00";
+                AM2 <= '0' & Op(0);
+
+                elsif(Op="0100" or Op="0101" or Op = "1100") then
+                AM1 <= "01";
+                AM2 <= "01";
+
+                end if;
+--------------------------------------------
+                when S5 =>     
+					 state_value <="0101";
+                
+                if (Op="0001") then
+                RFWRS <="01";
+                rf_StorM <= "10";
+                elsif (Op="0000" or Op="0010") then
+                RFWRS <= "10";
+                rf_StorM <= "10";
+                elsif (Op="0011") then
+                RFWRS <= "01";
+                rf_StorM <="00";
+
+                end if;
+---------------------------------------------
+                when S6 =>    
+					 state_value <="0110";
+
+                T3M <= '1';
+                wr_T3 <= '1';
+
+---------------------------------------------
+                when S99 =>     
+					 state_value <="1110";
+
+                wr_T3 <= '1';
+                S <="00";
+                AM1 <= "01";
+                AM2 <= "11";
+-------------------------------------------
+                when S100 =>     
+					 state_value <="1111";
+
+                RFWRS <= "01";
+                rf_StorM <= "11";
+-------------------------------------------
+						when others =>
+						null;
+					
+        end case;
+        end process Output_process;
+
+end architecture; 
+
+

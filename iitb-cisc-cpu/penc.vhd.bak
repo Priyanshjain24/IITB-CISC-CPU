@@ -1,0 +1,40 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Penc_8_3 is
+port (
+input: in std_logic_vector(7 downto 0);
+bin: out std_logic_vector(2 downto 0);
+int : out integer;
+v : out std_logic:= '0'
+);
+end entity;
+
+architecture tech of Penc_8_3 is
+if (input(7) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(6) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(5) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(4) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(3) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(2) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(1) = '1') then
+bin <= "111";
+int <= 7;
+elsif (input(6) = '1') then
+bin <= "111";
+int <= 7;
+else
+end if;
+end architecture;

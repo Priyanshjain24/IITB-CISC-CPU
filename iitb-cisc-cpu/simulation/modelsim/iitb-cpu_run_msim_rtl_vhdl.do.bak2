@@ -1,0 +1,29 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/DUT.vhdl}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/six_extender.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/register_file.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/reg16.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/reg1.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/mux_four_to_one.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/Mux16_4to1.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/memory.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/FSM.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/datapath.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/clock.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/alu.vhd}
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/Mux3_4_1.vhd}
+
+vcom -93 -work work {/home/sajal/Softwares/quartus/iitb-cpu/Testbench.vhdl}
+
+vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+
+add wave *
+view structure
+view signals
+run -all

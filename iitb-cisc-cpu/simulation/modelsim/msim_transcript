@@ -1,0 +1,397 @@
+# Reading pref.tcl
+# do iitb-cpu_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/Mux3_8_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:15 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/Mux3_8_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux3_8_1
+# -- Compiling architecture behave of Mux3_8_1
+# End time: 00:45:15 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/alu_3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:15 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/alu_3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity alu
+# -- Compiling architecture Struct of alu
+# End time: 00:45:15 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/FSMultraProMax.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/FSMultraProMax.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity FSMultraProMax
+# -- Compiling architecture fsm of FSMultraProMax
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/six_extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/six_extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity six_extender
+# -- Compiling architecture Struct of six_extender
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/shifter.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/shifter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity shifter
+# -- Compiling architecture Struct of shifter
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/register_file.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/register_file.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity RegisterFile
+# -- Compiling architecture arch of RegisterFile
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/reg16.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/reg16.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_16
+# -- Compiling architecture reg16 of reg_16
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/reg1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/reg1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity reg_1
+# -- Compiling architecture reg1 of reg_1
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/nine_extender.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/nine_extender.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity nine_extender
+# -- Compiling architecture Struct of nine_extender
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/mux_two_to_one.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/mux_two_to_one.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_two_to_one
+# -- Compiling architecture Struct of mux_two_to_one
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/mux_four_to_one.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/mux_four_to_one.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_four_to_one
+# -- Compiling architecture Struct of mux_four_to_one
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/mux_eight_to_one.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/mux_eight_to_one.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux_eight_to_one
+# -- Compiling architecture Struct of mux_eight_to_one
+# End time: 00:45:16 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/Mux16_4to1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:16 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/Mux16_4to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux16_4_1
+# -- Compiling architecture behave of Mux16_4_1
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/Mux16_2to1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/Mux16_2to1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux16_2_1
+# -- Compiling architecture behave of Mux16_2_1
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Memory
+# -- Compiling architecture mem of Memory
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/datapath.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/datapath.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Datapath
+# -- Compiling architecture path of Datapath
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/clock.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/clock.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity clock_generator
+# -- Compiling architecture bhv of clock_generator
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/penc.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/penc.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Penc_8_3
+# -- Compiling architecture tech of Penc_8_3
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/Mux3_2_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/Mux3_2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Mux3_2_1
+# -- Compiling architecture behave of Mux3_2_1
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/HP/Downloads/iitb-cpu-pro/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:45:17 on Dec 06,2022
+# vcom -reportprogress 300 -93 -work work C:/Users/HP/Downloads/iitb-cpu-pro/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 00:45:17 on Dec 06,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 00:45:17 on Dec 06,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.clock_generator(bhv)
+# Loading work.datapath(path)
+# Loading ieee.numeric_std(body)
+# Loading work.fsmultrapromax(fsm)
+# Loading work.mux16_2_1(behave)
+# Loading work.mux_two_to_one(struct)
+# Loading work.memory(mem)
+# Loading work.reg_16(reg16)
+# Loading work.mux3_8_1(behave)
+# Loading work.mux_eight_to_one(struct)
+# Loading work.mux_four_to_one(struct)
+# Loading work.mux3_2_1(behave)
+# Loading work.registerfile(arch)
+# Loading work.mux16_4_1(behave)
+# Loading work.penc_8_3(tech)
+# Loading work.reg_1(reg1)
+# Loading work.six_extender(struct)
+# Loading work.nine_extender(struct)
+# Loading work.shifter(struct)
+# Loading work.alu(struct)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/mem
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/RF
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 16.
+#    Time: 19 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 16, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 57 ns  Iteration: 0  Instance: /testbench
+# ** Fatal: (vsim-3734) Index value 65535 is out of range 0 to 255.
+#    Time: 140 ns  Iteration: 1  Process: /testbench/dut_instance/add_instance/mem/line__23 File: C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd
+# Fatal error in Process line__23 at C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd line 33
+# 
+# HDL call sequence:
+# Stopped at C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd 33 Process line__23
+# 
+add wave -position end sim:/testbench/dut_instance/clk/*
+add wave -position end  sim:/testbench/dut_instance/clk/clk_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/mem
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/RF
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 16.
+#    Time: 19 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 16, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 57 ns  Iteration: 0  Instance: /testbench
+# ** Fatal: (vsim-3734) Index value 65535 is out of range 0 to 255.
+#    Time: 140 ns  Iteration: 1  Process: /testbench/dut_instance/add_instance/mem/line__23 File: C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd
+# Fatal error in Process line__23 at C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd line 33
+# 
+# HDL call sequence:
+# Stopped at C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd 33 Process line__23
+# 
+add wave -position end  sim:/testbench/dut_instance/add_instance/clock/clk_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/dut_instance/add_instance/mem
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 16.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/mem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/RF
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /testbench/dut_instance/add_instance/RF
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 16.
+#    Time: 19 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 16, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Error: (vsim-3549) TEXTIO procedure READ(BIT_VECTOR) : Wrong BIT_VECTOR length. Expected 17, found 0.
+#    Time: 38 ns  Iteration: 0  Instance: /testbench
+# ** Note: SUCCESS, all tests passed.
+#    Time: 57 ns  Iteration: 0  Instance: /testbench
+# ** Fatal: (vsim-3734) Index value 65535 is out of range 0 to 255.
+#    Time: 140 ns  Iteration: 1  Process: /testbench/dut_instance/add_instance/mem/line__23 File: C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd
+# Fatal error in Process line__23 at C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd line 33
+# 
+# HDL call sequence:
+# Stopped at C:/Users/HP/Downloads/iitb-cpu-pro/memory.vhd 33 Process line__23
+# 
+# End time: 00:50:25 on Dec 06,2022, Elapsed time: 0:05:08
+# Errors: 6, Warnings: 6

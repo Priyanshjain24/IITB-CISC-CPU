@@ -1,0 +1,36 @@
+library std;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Memory is
+  port(
+    clk, wr: in std_logic;
+    A: in std_logic_vector(15 downto 0);
+	Din: in std_logic_vector(15 downto 0);
+    Dout: out std_logic_vector(15 downto 0));
+end entity;
+
+architecture mem of Memory is
+  type mem is array(0 to 65535) of std_logic_vector(15 downto 0);
+  signal RAM: mem:= ("0000010001000000", "0000000001001000", "0000000000000000",others => "1111111111111111");
+
+begin
+
+
+
+
+process(clk)
+  begin
+    if(clk = '1' and clk'event) then
+
+      if(wr = '1') then
+        RAM(to_integer(unsigned(A))) <= Din;
+      end if;
+
+      
+    end if;
+	 Dout <= RAM(to_integer(unsigned(A)));
+
+end process;
+end mem;
